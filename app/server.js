@@ -3,12 +3,14 @@ var express = require('express'),
     morgan = require('morgan'),
     sequelize = require('sequelize'),
     passport = require('passport'),
-    jwt = require('jsonwebtoken'),
-    mysql = require('mysql');
+    jwt = require('jsonwebtoken');
     // bcrypt = require('bcrypt');
 
 // Initializations
 var app = express();
+
+// App related modules or declarations
+var hookJWTStrategy = require('./helpers/passportStrategy');
 
 // Home Route.
 app.get('/', function(request, response) {
@@ -26,6 +28,9 @@ app.use(bodyParser.json());
 
 // Morgan http logger
 app.use(morgan('dev'));
+
+// Hooking up the passport jwt strategy
+hookJWTStrategy(passport);
 
 // Setting up Passport
 app.use(passport.initialize()); // Passport is an Authentication middleware for Express

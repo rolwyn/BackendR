@@ -1,5 +1,8 @@
 var config = module.exports;
 
+var Sequelize = require('sequelize'),
+    Op = Sequelize.Op;
+
 config.db = {
     username: 'root',
     password: 'root',
@@ -9,7 +12,16 @@ config.db = {
 config.db.details = {
     host: 'localhost',
     port: 3306,
-    dialect: 'mysql'
+    dialect: 'mysql',
+    operatorsAliases: {
+        $and: Op.and,
+        $or: Op.or,
+        $eq: Op.eq,
+        $gt: Op.gt,
+        $lt: Op.lt,
+        $lte: Op.lte,
+        $like: Op.like
+    }
 }
 
 config.keys = {

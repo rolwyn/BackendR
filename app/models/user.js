@@ -1,4 +1,4 @@
-var Sequelize = require('Sequelize'),
+var Sequelize = require('sequelize'),
     bcrypt = require('bcrypt');
 
 var config = require('./../config'),

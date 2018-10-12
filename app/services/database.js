@@ -1,4 +1,9 @@
 var config = require('./../config.js'),
-    Sequelize = require('Sequelize');
+    Sequelize = require('sequelize');
 
-module.exports = new Sequelize(config.db.name, config.db.username, config.db.password, config.db.details);
+module.exports = new Sequelize(
+    config.db.name,
+    config.db.username,
+    config.db.password,
+    config.db.details
+);
