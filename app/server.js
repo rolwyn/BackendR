@@ -3,8 +3,9 @@ var express = require('express'),
     morgan = require('morgan'),
     sequelize = require('sequelize'),
     passport = require('passport'),
-    jwt = require('jsonwebtoken');
+    jwt = require('jsonwebtoken'),
     mysql = require('mysql');
+    // bcrypt = require('bcrypt');
 
 // Initializations
 var app = express();

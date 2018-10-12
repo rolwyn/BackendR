@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/rolwyn/RBackend#readme",
   "dependencies": {
+    "bcrypt": "^3.0.1",
     "body-parser": "^1.18.3",
-    "brcypt": "^1.0.1",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.3.0",
     "morgan": "^1.9.1",
